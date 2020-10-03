@@ -28,3 +28,13 @@ face_recognation_android : 얼굴인식, 사용자 등록, 수정 및 자동차 
 - android studio : 4.0
 
 ### 사진
+- 자동차 번호판 인식
+![dryt](https://user-images.githubusercontent.com/46042936/94984682-854ce680-0589-11eb-8196-943ee3afab72.PNG)
+- gui_touch_panel : face-recognition-python 얼굴인식 
+![gui1](https://user-images.githubusercontent.com/46042936/94984683-88e06d80-0589-11eb-8b0a-1ec145ba3e22.jpg)
+- face_recognation_android : 얼굴인식
+![안드로이드2](https://user-images.githubusercontent.com/46042936/94984685-8b42c780-0589-11eb-8dbe-40baa6d47f01.jpg)
+- rc카1
+![자동차 앞](https://user-images.githubusercontent.com/46042936/94984687-8d0c8b00-0589-11eb-94f1-fa68f1b433c5.png)
+- rc카2
+![자동차옆](https://user-images.githubusercontent.com/46042936/94984688-8ed64e80-0589-11eb-8ec8-4f4bf3516923.png)
