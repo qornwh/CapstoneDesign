@@ -6,11 +6,17 @@
 
 ## 파일구성
 - 노트북
-'''server
-gui_touch_panel'''
+'''
+server
+gui_touch_panel
+'''
 - 라즈베리파이
-'''car
-park'''
+'''
+car
+park
+'''
 - 안드로이드 스마트폰
-'''face_recognation_android'''
+'''
+face_recognation_android
+'''
 
