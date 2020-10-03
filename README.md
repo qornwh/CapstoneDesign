@@ -6,17 +6,25 @@
 
 ## 파일구성
 - 노트북
-'''
-server
-gui_touch_panel
-'''
+```
+server : 자동주차 타워 서버, 번호판 인식 기능
+gui_touch_panel : 주차장 주차여부, 자동차 위치, 자동차 꺼내기 기능
+```
 - 라즈베리파이
-'''
-car
-park
-'''
+```
+car : 차랑 운반 rc카
+park : 주차타워 
+```
 - 안드로이드 스마트폰
-'''
-face_recognation_android
-'''
+```
+face_recognation_android : 얼굴인식, 사용자 등록, 수정 및 자동차 꺼내기 
+```
 
+## 환경
+- 네트워크 : 노트북 윈도우 10 pro 핫스팟 이용
+- os : 노트북 - 윈도우10, 라즈베리파이 - 라즈비안
+- pyqt5 : 5.15
+- python : 3.7
+- android studio : 4.0
+
+# 사진
