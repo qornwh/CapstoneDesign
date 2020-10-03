@@ -1,0 +1,50 @@
+@startuml
+start
+:start;
+floating note right : this is strat.py;
+fork
+:server;
+floating note right : server.py and open server
+partition Initialization {
+    :init internal openAlpr;
+    :init internal DB;
+}
+partition "Running" {
+    while (Client read data on?)
+        :rc카 등록;
+            if (빼낼 차량 여부) then (true)
+                :빼낼 차량(큐) 확인;
+            elseif (주차) then (true)
+                fork/'스레드 시작'/
+                :차랑 번호판 캡쳐 후 인식
+                openAlpr, droid cam;
+                end fork
+                :스레드 시작 완료;
+            elseif (빼낼 차량) then (true)
+                :빼낼 차량
+                위치 찾기;
+            elseif (check) then (true)
+                :번호판 인식
+                완료 확인;
+            elseif (run) then (true)
+                :주차할 위치
+                찾기;
+            elseif (up) then (true)
+                :자동차 up
+                완료 확인;
+            elseif (down) then (true)
+                :자동차 down
+                완료 확인;
+            elseif (arrive) then (true)
+                :주차장 위치
+                도착;
+            elseif (active) then (true)
+                :주차 or 빼내기
+                완료;
+            endif
+        :car 수신에 맞는 결과 전송;
+    endwhile(server off)
+}
+end fork
+    :process close;
+@enduml

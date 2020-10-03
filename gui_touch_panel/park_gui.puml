@@ -1,0 +1,53 @@
+@startuml
+start
+:start;
+fork
+    :main Activity;
+    :주차장 주차
+    여부 표시;
+fork again
+    :find Activity;
+    :button click;
+    if (find data?) then (true)
+        :문자열 검사;
+        :서버에 자동차
+        주차여부 요청 send
+        후 확인 recive;
+    else (false)
+        :다시 입력;
+    endif
+    floating note right : button click\nevent;
+fork again
+    :out Activity;
+    :button click;
+    if (find data?) then (true)
+        :문자열 검사
+        (차번호, 이름);
+        fork
+            :얼굴인식 매칭
+            5초간 인식;
+        end fork
+        if (얼굴 확인 ?) then (true)
+            :서버에 자동차
+            주차여부 요청 send
+            후 확인 recive;
+        else (false)
+            :매칭 실패;
+        endif
+    else (false)
+        :다시 입력;
+    endif
+fork again
+    :timer;
+    :tick
+    {
+        서버에 주차여부
+        data recive
+    }event
+    main Activity
+    주차 label에 표시;
+    floating note right : event 1sec;
+
+end fork
+:end timer, window;
+@enduml

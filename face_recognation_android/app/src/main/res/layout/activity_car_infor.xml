@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10sp"
+        android:background="#5BF44336"
+        android:gravity="center"
+        android:text="내 정보"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="사진촬형 촬영"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:layout_weight="0"
+            android:gravity="bottom|right"
+            android:text="차번호:"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/info_car"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="15dp"
+            android:layout_weight = "1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:layout_weight = "0"
+            android:gravity="bottom|right"
+            android:text="이름:"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="15dp"
+            android:layout_weight = "1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:layout_weight="0"
+            android:gravity="bottom|right"
+            android:text="폰 번호:"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/info_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="15dp"
+            android:layout_weight = "1"  />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/info_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="사진촬영" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/info_out"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="취소">
+
+        </Button>
+
+        <Button
+            android:id="@+id/info_in"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="수정" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <SurfaceView
+            android:id="@+id/info_img"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/info_sideView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

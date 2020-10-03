@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10sp"
+        android:background="#5BF44336"
+        android:gravity="center"
+        android:text="차량 등록"
+        android:textSize="25sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:id="@+id/layoutM">
+
+        <!--android:layout_weight="0.5" 한 이유: horizontal 의 써서 TextView랑 EditText  ㅁㅁ 만들기 위해
+                    TextView에 android:layout_weight="0.2"  EditText android:layout_weight="1.5" 를 준다.
+          -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.39"
+                android:gravity="right"
+                android:text="이름: "
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/EditText_name"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.35"
+                android:hint="이름입력">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="right"
+                android:text="차량번호: "
+                android:textSize="15dp"></TextView>
+
+            <!--inputType="number" 입력기능 숫자-->
+            <EditText
+                android:id="@+id/EditText_car_number"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:hint="띄어 쓰기 없이 입력"
+                android:inputType="text">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:text="폰 번호: "
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/EditText_phone"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:enabled="false"
+                android:inputType="number"></EditText>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/b_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="사진촬영" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="3dp">
+
+        <Button
+            android:id="@+id/out_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="돌아가기">
+
+        </Button>
+
+        <Button
+            android:id="@+id/input_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="입력" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <SurfaceView
+            android:id="@+id/c_face"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/sideView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

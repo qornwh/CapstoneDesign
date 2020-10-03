@@ -1,0 +1,25 @@
+@startuml
+start
+:start;
+floating note right : this is strat.py;
+fork
+:server;
+floating note right : server.py and open server
+partition Initialization {
+    :init internal openAlpr;
+    :init internal DB;
+}
+partition "Running" {
+    while (Client read data on?)
+        :phone 등록;
+            if (car out) then (true)
+                :빼낼 차량
+                위치 찾기
+                후 빼냄;
+            endif
+        :phone 수신에 맞는 결과 전송;
+    endwhile(server off)
+}
+end fork
+    :process close;
+@enduml
